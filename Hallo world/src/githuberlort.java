@@ -1,6 +1,7 @@
 
-public class githuberlort {
+public class doinYourMom {
+	String a = "a";
 	public static void main(String[] args) {
-		System.out.println("fish dicks 2");
+		System.out.println(a);
 	}
 }
