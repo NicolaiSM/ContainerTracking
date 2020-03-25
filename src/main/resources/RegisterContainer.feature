@@ -19,8 +19,9 @@
 @tag
 Feature: Registration of container
 
+	Background: The information is Port of origin, Destination, Content
 
-Scenario: Successful registration of a container
+	Scenario: Successful registration of a container
     Given New information
 	  When registering container
     And New information is valid
@@ -28,7 +29,7 @@ Scenario: Successful registration of a container
 	  And Change container status
 
 
-Scenario: Unsuccessful registration of container
+	Scenario: Unsuccessful registration of container
 		Given New information
 		When Registering a container
     And New information is valid
