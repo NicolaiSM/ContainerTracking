@@ -17,12 +17,11 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Update internal container information
+Feature: Set internal container information
 
   Scenario: Succesful update 
-    Given Registered container
-    And valid internal information option
-    And valid internal information input
+    Given valid information
+    Registered container
     When Update internal container information
     Then Update internal container information
 
