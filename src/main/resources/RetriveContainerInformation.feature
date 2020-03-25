@@ -17,15 +17,14 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Get Container Information
-
+Feature: Retrive Container Information
+	
+	Background: The information is Client, Port of Origin, Destination and content
+	
   @tag1
-  Scenario: Get Container Information
-    Given Container
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+  Scenario: Retrive the information about a container
+    Given A specific countainer
+    When Retreving the information
+    Then Display the information of the container
 
 

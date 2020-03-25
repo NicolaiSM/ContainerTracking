@@ -17,17 +17,19 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Find client
+Feature: Find client based on keyword
+
+	Background: Keyword is contactperson firstname, contacperson lastname, contactperson email, client adress and client name
 
   @tag1
-  Scenario: Succesful client search
+  Scenario: One or more cleints found matching the keyword
     Given Keyword
-    When Find client 
-    Then Display client (information)
+    When Finding clients that matches the keyword
+    Then Display client that matches the search
 
-	Scenario: Unsuccesful client search: Invalid information
+	Scenario: No clients found that matching the keyword
 		Given Keyword
-		When Find client
-		Then Client not found
+		When Finding cl,ients that matches the keyword
+		Then Display that no clients was foud that matches the keyword
 
 		

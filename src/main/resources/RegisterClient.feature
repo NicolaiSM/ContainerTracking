@@ -19,7 +19,7 @@
 @tag
 Feature: Register client
 
-Background: Valid information is the validation of Company name, adresse, contact person firstname, contact person lastname and contact person email. 
+Background: Valid information is the validation of Company name, adresse, contact person firstname, contact person lastname, contact person email and password. 
 
   @tag1
   Scenario: Succesful client registration

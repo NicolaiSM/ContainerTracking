@@ -17,16 +17,18 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Find containers based on a keyword
+  
+  Background: Keyword is Port of origin, Destination, Container ID, Journey ID, Content, Client name, Contactperson Email, contactperson firstname, contactperson lastname, clinet address. 
 
   @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+  Scenario: One or more containers matching the keyword is found
+    Given Keyword
+    When Finding a container that matches the keyword
+    Then Display the containers
+
+	Scenario: No Container found that matches the keyword
+		Given Keyword
+		When Finding a container that matches the keyword
+		Then Display that no containers matching the keyword was found
 

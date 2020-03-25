@@ -17,13 +17,14 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Create Container
-
+Feature: Create a new container
+	
+	Background: Each container will get a unique ID
+	
   @tag1
-  Scenario: Succesful creation of container
-    Given Container list
+  Scenario: Generating a new container
+    Given Current position
     When Creating new container
-    Then Create new contianer object
-    And Generate unique ID
+    Then Generate unique ID
 
 

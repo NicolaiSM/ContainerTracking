@@ -17,18 +17,10 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Find old journeys and active journeys based on keywords. 
-	
-	Background: Keyword is Port of Origin and Destination
-	
-  @tag1
-  Scenario: Journeys are found that matches the keyword
-    Given Keyword
-    When Finding journeys that matches the keyword 
-    Then Display journeys that was found
+Feature: Retrive the positional data over time during a journey.
 
-  Scenario: No journeys was found that matches the keyword
-    Given Keyword
-    When Finding journeys that matches the keyword 
-    Then Display that no Journeys was found that matches the keyword
-    
+  @tag1
+  Scenario: Retrivel of the postional data 
+    Given A journey
+    When Retriving the positional data
+    Then Display the Positional data

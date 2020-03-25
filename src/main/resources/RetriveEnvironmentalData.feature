@@ -17,13 +17,14 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Get Internal Container Information
-
+Feature: Retrive envioremental data about container 
+	
+	Background: Envioremental data is temperature, huminidy and preasure over time in the container during a journey.
+	
   @tag1
-  Scenario: Fetch Internal information 
-    Given Container
-    When Get Container information
+  Scenario: Retrivel of envioremental data 
+    Given A Specific Container
+    When Retriveing the envioremental data
     Then Display Internal information
-    And Record information
 
 
