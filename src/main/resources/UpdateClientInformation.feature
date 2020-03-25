@@ -21,13 +21,13 @@ Feature: Update Client information
 
   @tag1
   Scenario: Succesful Client information update
-    Given Valid information
-    And Confirm?
-    When Update Client information 
+    Given New information
+    And New information is valid
+    When Update Client information
     Then Change client information
     
   Scenario: Unsuccesful Client information update
-    Given Invalid information
-    When Update Client information 
-    Then Invalid information
-    
+    Given New information
+    And New information is invalid
+    When Update Client information
+    Then Display that the information is invalid

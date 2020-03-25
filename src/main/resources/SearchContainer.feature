@@ -18,7 +18,6 @@
 #Sample Feature Definition Template
 @tag
 Feature: Search Container
-  I want to use this template for my feature file
 
   @tag1
   Scenario: Succesful Search
