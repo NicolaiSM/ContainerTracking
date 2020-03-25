@@ -19,23 +19,18 @@
 @tag
 Feature: Registration of container
 
+
 Scenario: Successful registration of a container
-#	  Given a port Of origin
-#	  And an available container
-#	  And a destination Port
-#	  And a Content description
-#	  And a client name
-#	  And a client ID
-#		And intended internal conditions
-		Given valid information
-	  When registering container 
-#	  And an available journey
+    Given New information
+	  When registering container
+    And New information is valid
 	  Then Interface displays that the container is registered
 	  And Change container status
 
 
 Scenario: Unsuccessful registration of container
-		Given invalid information
-		When registering container
+		Given New information
+		When Registering a container
+    And New information is valid
 		Then Interface displays that container information was missing or incorrect
-		And prompt information input
+		And Restart registration

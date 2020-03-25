@@ -20,16 +20,16 @@
 Feature: Search Container
 
   @tag1
-  Scenario: Succesful Search
+  Scenario: Container is found
     Given Keyword
-    When Finding Container
-    And Containers found
-    Then Display Containers
+    When Searching for container
+    And Keyword matches existing container(s)
+    Then Display container(s)
     
-   Scenario: Unsuccesful Search
+   Scenario: No container is found
    	Given Keyword
-    When Finding Container
-    And No Containerfound
-    Then Display no Containers found
+    When Searching for container
+    And No container matches keyword
+    Then Display no container(s) found
 
 
