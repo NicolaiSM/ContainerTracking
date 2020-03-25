@@ -38,9 +38,3 @@ Scenario: Unsuccessful registration of container
 		When registering container
 		Then Interface displays that container information was missing or incorrect
 		And prompt information input
-
-
-Scenario: 
-
-
-		
