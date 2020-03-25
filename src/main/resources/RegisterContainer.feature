@@ -19,24 +19,28 @@
 @tag
 Feature: Registration of container
 
-  @tag1
-  Scenario: Succesful registration of a container
-    Given a Port Of Origin
-    And a avaliable container
-    And a Destination Port
-    And a Content description
-    When registering 
-    And a avaliable journey
-    Then Interface displays that the container is registered
-    And Change container status
+Scenario: Successful registration of a container
+#	  Given a port Of origin
+#	  And an available container
+#	  And a destination Port
+#	  And a Content description
+#	  And a client name
+#	  And a client ID
+		Given valid information
+	  When registering container 
+#	  And an available journey
+	  Then Interface displays that the container is registered
+	  And Change container status
 
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
 
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+Scenario: Unsuccessful registration of container
+		Given invalid information
+		When registering container
+		Then Interface displays that container information was missing or incorrect
+		And prompt information input
+
+
+Scenario: 
+
+
+		
