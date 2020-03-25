@@ -17,20 +17,22 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Set internal container information
+Feature: Update container information
 
   Scenario: Succesful update 
-    Given valid information
-    Registered container
+    Given Datafile
+    And Valid information
     When Update internal container information
     Then Update internal container information
+    And Display container has been updated
 
-  Scenario: Unsuccesful update : unregistered container
-    Given Unregistered container
-    And internal information option
-    And valid internal information input
+  Scenario: Unsuccesful update: No datafile
+    Given No datafile
     When Update internal container information
-    Then display that the container is unregistered
+    Then display missing datafile
     
-  Scenario: Unsuccesful update : invalid internal information
-    Given 
+  Scenario: Unsuccesful update: Invalid information
+    Given Datafile
+    And Invalid information
+    When Update internal container information
+    Then display that there is bad data
