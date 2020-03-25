@@ -20,19 +20,19 @@
 Feature: Update container information
 
   Scenario: Succesful update 
-    Given Datafile
-    And Valid information
-    When Update internal container information
-    Then Update internal container information
-    And Display container has been updated
+    Given A new datafile
+    And The information is correct
+    When Update container information
+    Then Add data to existing data
+    And Display container information has been updated
 
   Scenario: Unsuccesful update: No datafile
-    Given No datafile
+    Given There is no datafile given
     When Update internal container information
-    Then display missing datafile
+    Then Display that a datafile is missing
     
   Scenario: Unsuccesful update: Invalid information
-    Given Datafile
-    And Invalid information
+    Given A new datafile
+    And The information is invalid
     When Update internal container information
-    Then display that there is bad data
+    Then Display that there is incorrect data

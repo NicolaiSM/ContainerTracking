@@ -17,17 +17,16 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Update Client information
+Feature: Title of your feature
+  I want to use this template for my feature file
 
   @tag1
-  Scenario: Succesful Client information update
-    Given New information
-    And New information is valid
-    When Update Client information
-    Then Change client information
-    
-  Scenario: Unsuccesful Client information update
-    Given New information
-    And New information is invalid
-    When Update Client information
-    Then Display that the information is invalid
+  Scenario: Title of your scenario
+    Given I want to write a step with precondition
+    And some other precondition
+    When I complete action
+    And some other action
+    And yet another action
+    Then I validate the outcomes
+    And check more outcomes
+
