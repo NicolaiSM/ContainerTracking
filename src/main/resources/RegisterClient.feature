@@ -21,22 +21,25 @@ Feature: Register client
 
   @tag1
   Scenario: Succesful client registration
-    Given Client in database is false
-    And all information is true
+    Given Client doesnt exist
+    And Valid information 
     When Register client
-    Then Client saved in database
+    Then Client new client object
+    And Client ID generated
+    And Succesful registration
     
-   Scenario: Client already exists
-   	Given Client in database is true (checks on client name)
+   Scenario: Unsuccsesful client registration: Client already exists
+   	Given Client name exists
     When Register client
-    Then Client not saved (prompt for new name)
+    Then Client not registered
+    And Name already in use
    
-   Scenario: Not enough information
-  	Given Client in database is false
-    And all information is false
+   Scenario: Unsuccsesful client registration: Invalid information
+  	Given Client doesnt exists
+    And Invalid information
     When Register client
-    Then Client saved in database
-    
-   Scenario: 
+    Then Client not registered
+    And Display faulty information
 
+    
 
