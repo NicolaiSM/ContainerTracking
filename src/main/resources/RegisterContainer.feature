@@ -26,6 +26,7 @@ Scenario: Successful registration of a container
 #	  And a Content description
 #	  And a client name
 #	  And a client ID
+#		And intended internal conditions
 		Given valid information
 	  When registering container 
 #	  And an available journey

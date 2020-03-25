@@ -19,12 +19,14 @@
 @tag
 Feature: Register client
 
+Background: Valid information is the validation of Company name, adresse, contact person firstname, contact person lastname and contact person email. 
+
   @tag1
   Scenario: Succesful client registration
-    Given Client doesnt exist
+    Given Client name doesnt exist
     And Valid information 
     When Register client
-    Then Client new client object
+    Then new client is registered 
     And Client ID generated
     And Succesful registration
     

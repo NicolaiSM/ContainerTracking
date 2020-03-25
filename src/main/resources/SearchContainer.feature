@@ -17,21 +17,20 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Update internal container information
+Feature: Search Container
+  I want to use this template for my feature file
 
-  Scenario: Succesful update 
-    Given Registered container
-    And valid internal information option
-    And valid internal information input
-    When Update internal container information
-    Then Update internal container information
-
-  Scenario: Unsuccesful update : unregistered container
-    Given Unregistered container
-    And internal information option
-    And valid internal information input
-    When Update internal container information
-    Then display that the container is unregistered
+  @tag1
+  Scenario: Succesful Search
+    Given Keyword
+    When Finding Container
+    And Containers found
+    Then Display Containers
     
-  Scenario: Unsuccesful update : invalid internal information
-    Given 
+   Scenario: Unsuccesful Search
+   	Given Keyword
+    When Finding Container
+    And No Containerfound
+    Then Display no Containers found
+
+
