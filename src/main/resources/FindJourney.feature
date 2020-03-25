@@ -20,6 +20,13 @@
 Feature: Find journey
 
   @tag1
-  Scenario: Valid information
-    Given Valid information
-    When Find journey  
+  Scenario: Succesful journey search
+    Given Keyword
+    When Find journey 
+    Then Display journey
+
+  Scenario: Unsuccesful journey search: Invalid information
+    Given Keyword
+    When Find journey 
+    Then Journey not found
+    
