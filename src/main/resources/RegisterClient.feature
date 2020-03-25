@@ -27,14 +27,14 @@ Background: Valid information is the validation of Company name, adresse, contac
     And Valid information 
     When Register client
     Then new client is registered 
-    And Client ID generated
+    And uniqe Client ID generated
     And Succesful registration
     
    Scenario: Unsuccsesful client registration: Client already exists
    	Given Client name exists
     When Register client
     Then Client not registered
-    And Name already in use
+    And Display Name already in use
    
    Scenario: Unsuccsesful client registration: Invalid information
   	Given Client doesnt exists
