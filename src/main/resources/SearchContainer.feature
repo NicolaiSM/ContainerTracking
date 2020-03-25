@@ -19,6 +19,8 @@
 @tag
 Feature: Search Container
 
+	Background: Keyword is Container ID, Journey ID, Port of Origin, Destination, Content or Client
+
   @tag1
   Scenario: Container is found
     Given Keyword

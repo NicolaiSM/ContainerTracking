@@ -18,7 +18,10 @@
 #Sample Feature Definition Template
 @tag
 Feature: Update Client information
-
+	
+	Background: Information is: contact person fistname, contact person lastname, contact person email, Client address 
+	
+	
   @tag1
   Scenario: Succesful Client information update
     Given New information

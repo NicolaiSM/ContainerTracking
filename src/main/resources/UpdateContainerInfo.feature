@@ -19,9 +19,11 @@
 @tag
 Feature: Update container information
 
+	Background: datafile is a file containing: Container ID, timestamp, temperature, humidity, pressure and location
+
   Scenario: Succesful update 
     Given A new datafile
-    And The information is correct
+    And The information of the datafile is correct
     When Update container information
     Then Add data to existing data
     And Display container information has been updated
@@ -33,6 +35,6 @@ Feature: Update container information
     
   Scenario: Unsuccesful update: Invalid information
     Given A new datafile
-    And The information is invalid
+    And The information of the datafile is invalid
     When Update internal container information
     Then Display that there is incorrect data
