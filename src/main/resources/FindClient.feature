@@ -21,7 +21,7 @@ Feature: Find client
 
   @tag1
   Scenario: Succesful client search
-    Given Keyword
+    Given 	Keyword
     When Find client 
     Then Display client (information)
 
