@@ -24,11 +24,13 @@ Feature: Find containers based on a keyword
   @tag1
   Scenario: One or more containers matching the keyword is found
     Given Keyword
-    When Finding a container that matches the keyword
+    When Finding a container
+    And the keyword matches
     Then Display the containers
 
 	Scenario: No Container found that matches the keyword
 		Given Keyword
 		When Finding a container that matches the keyword
+		And No keyword matches
 		Then Display that no containers matching the keyword was found
 

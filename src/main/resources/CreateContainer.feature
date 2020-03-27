@@ -23,8 +23,9 @@ Feature: Create a new container
 	
   @tag1
   Scenario: Generating a new container
-    Given Current position
+    Given The Current position of the container
     When Creating new container
     Then Generate unique ID
+    And Save it with existing containers
 
 

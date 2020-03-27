@@ -24,12 +24,14 @@ Feature: Find client based on keyword
   @tag1
   Scenario: One or more cleints found matching the keyword
     Given Keyword
-    When Finding clients that matches the keyword
+    When Finding clients
+    And The keyword matches
     Then Display client that matches the search
 
 	Scenario: No clients found that matching the keyword
 		Given Keyword
-		When Finding cl,ients that matches the keyword
+		When Finding clients
+		And The keyword dosent match
 		Then Display that no clients was foud that matches the keyword
 
 		

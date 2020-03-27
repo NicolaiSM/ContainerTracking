@@ -17,14 +17,21 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Retrive envioremental data about container 
+Feature: Retrive environmental data about container 
 	
-	Background: Envioremental data is temperature, huminidy and preasure over time in the container during a journey.
+	Background: environmental data is temperature, humidity and pressure over time in the container during a journey.
 	
   @tag1
-  Scenario: Retrivel of envioremental data 
-    Given A Specific Container
-    When Retriveing the envioremental data
-    Then Display Internal information
+  Scenario: Retrivel of environmental data 
+    Given A Specific Container 
+    And Container status is active # Oliver wants to change to afterWwhen
+    When Retriveing the environmental data
+    Then Display environmental data
+    
+  Scenario: Fail to retrive environmental data
+  	Given A Specific Container
+  	And Container status is inactive
+    When Retriveing the environmental data
+    Then Display no avaliable environmental data
 
 

@@ -26,9 +26,9 @@ Background: Valid information is the validation of Company name, adresse, contac
     Given Client name doesnt exist
     And Valid information 
     When Register client
-    Then new client is registered 
-    And uniqe Client ID generated
-    And Succesful registration
+    Then create new client with given information
+    And generate uniqe Client ID 
+    And Display Succesful registration
     
    Scenario: Unsuccsesful client registration: Client already exists
    	Given Client name exists
@@ -41,7 +41,7 @@ Background: Valid information is the validation of Company name, adresse, contac
     And Invalid information
     When Register client
     Then Client not registered
-    And Display faulty information
+    And Display invalid information
 
     
 

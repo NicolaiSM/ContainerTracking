@@ -19,16 +19,18 @@
 @tag
 Feature: Find old journeys and active journeys based on keywords. 
 	
-	Background: Keyword is Port of Origin and Destination
+	Background: Keyword is Port of Origin, Destination, Client name, and status
 	
   @tag1
   Scenario: Journeys are found that matches the keyword
     Given Keyword
-    When Finding journeys that matches the keyword 
+    When Finding journeys 
+		And the keyword matches
     Then Display journeys that was found
 
   Scenario: No journeys was found that matches the keyword
     Given Keyword
-    When Finding journeys that matches the keyword 
+    When Finding journeys
+    And The keyword dosent match
     Then Display that no Journeys was found that matches the keyword
     
