@@ -1,24 +1,32 @@
-
+import classes.*;
 import io.cucumber.java.en.*;
 
-
 public class StepDefinition {
+	//String CompanyName, ID id, String CompanyAddress, Person contactPerson
+//	Person Jens = new Person("Jens", "Didreksen", "Jens.didreksen@live.dk");
+//	ID company1 = new ID(Netto, 2103343);
+//	Client Netto = new Client("Netto", company1 , "Arne jakobsens alé 28", Jens);
+	
 	@Given("Client name doesnt exist")
 	public void client_name_doesnt_exist() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    // Write code here that turns the phrase above into concrete action
+		Client.testExistence(Netto);
+
+	    
 	}
 
 	@Given("Valid information")
 	public void valid_information() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		
 	}
 
 	@When("Register client")
 	public void register_client() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("create new client with given information")

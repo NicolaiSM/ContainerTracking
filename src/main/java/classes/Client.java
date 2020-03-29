@@ -1,85 +1,83 @@
 package classes;
 
-class Person {
-	private String firstname;
-	private String lastname;
-	private String email;
+import java.util.*;
+
+
+public class Client {
+
+	private static LinkedList<String> clientList = new LinkedList<String>();
 	
-	public Person(String firstname, String lastname, String email) {
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.email = email;
-	}
-
-	public String getFirstname() {
-		return firstname;
-	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	private Map<String,String> data = new HashMap<String, String>();
 	
 	
 	
-}
-
-class Client {
+//	LinkedList<String> clientList = new LinkedList<String>();
+//	private LinkedList<String> clientList;
 	
-	
-	private String CompanyName;
+	private String companyName;
 	private ID id;
-	private String CompanyAddress;
-	private Person ContactPerson;
+	private String companyAddress;
+	private Person contactPerson;
 	
-	public Client(String CompanyName, ID id, String CompanyAddress, Person contactPerson) {
-		this.CompanyName = CompanyName;
-		this.id = id;
-		this.CompanyAddress = CompanyAddress;
-		ContactPerson = contactPerson;
+	public Client(String companyName, ID id, String CompanyAddress, Person contactPerson) {
+		this.companyName = companyName;
+//		this.id = id;
+//		this.CompanyAddress = CompanyAddress;
+//		ContactPerson = contactPerson;
+		
+		//add to map
+		data.put ("companyName", companyName);
+		data.put("id", id.toString());
+		data.put("companyAddress", companyAddress);
+		//add person to map
+		data.put("firstName", this.contactPerson.getFirstname());
+		data.put("secondName", this.contactPerson.getLastname());
+		data.put("e-mail", this.contactPerson.getEmail());
+		
 	}
+
+	
+	
 
 	public String getCompanyName() {
-		return CompanyName;
+		return companyName;
 	}
 
 	public void setCompanyName(String companyName) {
-		CompanyName = companyName;
+		this.companyName = companyName;
 	}
 
 	public String getCompanyAddress() {
-		return CompanyAddress;
+		return companyAddress;
 	}
 
 	public void setCompanyAddress(String companyAddress) {
-		CompanyAddress = companyAddress;
+		this.companyAddress = companyAddress;
 	}
 
 	public Person getContactPerson() {
-		return ContactPerson;
+		return contactPerson;
 	}
 
 	public void setContactPerson(Person contactPerson) {
-		ContactPerson = contactPerson;
+		this.contactPerson = contactPerson;
 	}
 
 	public ID getId() {
 		return id;
+	}
+	
+//	public LinkedList<String> getClientList(){
+//		return this.clientList;
+//	}
+	
+	public static boolean testExistence(Client company) {
+		
+		return clientList.contains(company.companyName); // Referer til database
+	}
+	
+	public boolean validInformation(Client company) {
+		
 	}
 	
 	

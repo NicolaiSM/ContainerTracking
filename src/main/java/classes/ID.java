@@ -1,7 +1,7 @@
 package classes;
 
 
-class ID {
+public class ID {
 	
 	private String identifier;
 	private int incrementer;
@@ -17,7 +17,7 @@ class ID {
 		this.incrementer = number;
 	}
 	
-	public ID(Client client, int number) {
+	public ID(int number) {
 		this.identifier = "CLI";
 		this.incrementer = number;
 	}
