@@ -39,7 +39,7 @@ class Person {
 	
 }
 
-class Client {
+public class Client {
 	
 	
 	private String CompanyName;

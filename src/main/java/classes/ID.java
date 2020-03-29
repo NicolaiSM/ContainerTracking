@@ -1,41 +1,28 @@
 package classes;
 
 
-class ID {
+public class ID {
 	
 	private String identifier;
-	private int incrementer;
-	private String id = identifier + "-" + Integer.toString(incrementer);
-	
-	public ID(Container container, int number) {
-		this.identifier = "CON";
-		this.incrementer = number;
-	}
-	
-	public ID(Journey journey, int number) {
-		this.identifier = "JOU";
-		this.incrementer = number;
-	}
-	
-	public ID(Client client, int number) {
-		this.identifier = "CLI";
-		this.incrementer = number;
+	private String number;
+	private String id = identifier + "-" + number;
+	int zeros[] = new int[8];
+	public ID(String identifier, int number) {
+		this.identifier = identifier;
+		String s = Integer.toString(number);
+		for (int i=0;i<8;i++) {
+			zeros[i]=0;
+		}
+		for (int j=0;j<s.length();j++) {
+			zeros[8-s.length()+j]=s.charAt(j);
+		}
+		for (int i=0;i<8;i++) {
+			this.number += String.valueOf(zeros[i]);
+		}
 	}
 
-
-//	public String getIdentifier() {
-//		return identifier;
-//	}
-//
-//	public int getIncrementer() {
-//		return incrementer;
-//	}
 
 	public String getId() {
 		return id;
 	}
-
-	
-	
-	
 }
