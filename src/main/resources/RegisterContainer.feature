@@ -19,27 +19,33 @@
 @tag
 Feature: Registration of container
 
-	Background: The information is destination, client and content
-
 	Scenario: Successful registration of a container
-    Given Port
-    And Destination
-    And Client
-    And Content
-    And Container
+    Given Port of origin "Stockholm"
+    And Destination "Copenhagen"
+    And Client "NETTO"
+    And Content "Milk"
+    And Container Port "Stockholm" and ID "CON00000001"
 	  When Registering a container
-    And New container information is valid
     Then Change container status
 
 
-	Scenario: Unsuccessful registration of container
-    Given Port
-    And Destination
-    And Client
-    And Content
-    And Container
+	Scenario: Unsuccessful registration of container (invalid info)
+    Given Port of origin "Stockholm"
+    And Destination "Moon"
+    And Client "NETTO"
+    And Content "Milk"
+    And Container Port "Stockholm" and ID "CON00000001"
 		When Registering a container
-    And New information is invalid
     Then Display that the information is invalid
+    
+  Scenario: Unsuccessful registration of container (no container)
+    Given Port of origin "Stockholm"
+    And Destination "Copenhagen"
+    And Client "NETTO"
+    And Content "Milk"
+    And Container "NULL"
+    When Registering a container
+    Then Display that there is no container available
+    
     
     

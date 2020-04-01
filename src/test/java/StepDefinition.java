@@ -6,113 +6,63 @@ import java.util.ArrayList;
 import classes.*;
 
 public class StepDefinition {
-	int containerIDnumber = 0;
-	String portOfNewContainer;
-	ID newID;
-	Container newContainer;
-	ArrayList containers;
-    String destination;
-	String clientName;
-	String content;
-	String port;
-	Container oldContainer;
-	boolean validContainerInformation;
 	
-//CREATE CONTAINER	
-	
-	
-	@Given("The Current position of the container")
-	public void the_Current_position_of_the_container(String portOfNewContainer) {
-		this.portOfNewContainer = portOfNewContainer;
+	@Given("Port of origin \\{string}")
+	public void port_of_origin(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@When("Creating new container")
-	public void creating_new_container() {
-		this.newContainer = new Container(portOfNewContainer);
-
+	@Given("Destination \\{string}")
+	public void destination(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("Generate unique ID")
-	public void generate_unique_ID() {
-		this.newID = new ID("CON",containerIDnumber);
-		containerIDnumber++;
-		this.newContainer.setID(this.newID);
+	@Given("Client \\{string}")
+	public void client(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	
-	@Then("Save it with existing containers")
-	public void save_it_with_existing_containers() {
-//		change from arraylist to hypernate
-		containers.add(this.newContainer);
-	}
-	
-	
-	
-// REGISTER CONTAINER
-	
-	
-	
-	
-	@Given("Destination")
-	public void destination(String destination) {
-		this.destination = destination;
+	@Given("Content \\{string}")
+	public void content(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Given("Client")
-	public void client(String clientName) {
-		this.clientName = clientName;
+	@Given("Container \\{string}, {string}")
+	public void container(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Given("Content")
-	public void content(String content) {
-	    this.content = content;
-	}
-	
-	@Given("Port")
-	public void port(String port) {
-		this.port = port;
-	}
-
-	@Given("Container")
-	public void Container(Container container) {
-	    this.oldContainer = container;
-	    this.newContainer = container;
-	}
-	
-	@When("Registering container")
-	public void registering_container() {
-//		change from arraylist to hypernate
-		int index = containers.indexOf(oldContainer);
-		containers.set(index,newContainer);
-	}
-
-	@When("New container information is valid")
-	public void new_container_information_is_valid() {
-		boolean validContainer = containers.contains(this.oldContainer);
-		boolean availability = this.oldContainer.getStatus();
-		boolean samePort = this.port == this.oldContainer.getPortOfOrigin();
-		if (validContainer & availability & samePort) {
-			this.validContainerInformation = true;
-		}
-		else {
-			this.validContainerInformation = false;
-
-		}
+	@When("Registering a container")
+	public void registering_a_container() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Change container status")
 	public void change_container_status() {
-	    this.newContainer.setStatus(false);
-	    this.newContainer.setContent(this.content);
-	    this.newContainer.setDestination(this.destination);
-	    this.newContainer.setUser(this.clientName);
-		this.newID = new ID("CON",containerIDnumber);
-		containerIDnumber++;
-	    this.newContainer.setJourney(new Journey(newID));
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
+
 
 	@Then("Display that the information is invalid")
 	public void display_that_the_information_is_invalid() {
-	    System.out.println("The given container information is invalid.");
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
+
+
+	@Then("Display that there is no container available")
+	public void display_that_there_is_no_container_available() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	
+	
 }
