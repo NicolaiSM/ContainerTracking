@@ -7,6 +7,7 @@ public class ID {
 	private String number;
 	private String id = identifier + "-" + number;
 	int zeros[] = new int[8];
+	
 	public ID(String identifier, int number) {
 		this.identifier = identifier;
 		String s = Integer.toString(number);
